@@ -17,7 +17,7 @@ const Followers = ({ items }) => {
 
   return (
     <>
-      <Text code className="date">
+      <Text code className="total">
         Total Followers: {items.length}
       </Text>
       <ul className="followers row">
