@@ -2,16 +2,15 @@ import React from "react"
 
 const Follower = ({ followers }) => {
 
-  const follower =
-    Object.keys(followers).map(item => {
-      return item.login
-    })
+  const follower = followers.map((item) =>
+    <li>{item.login}</li>
+  )
 
 
   return (
-    <div className="follower">
+    <ul className="followers">
       {follower}
-    </div>
+    </ul>
   )
 
 }

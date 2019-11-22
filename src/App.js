@@ -22,6 +22,7 @@ const App = () => {
     try {
       followers = await GithubService.getFollowersOfUser(userName)
       setFollowers(followers)
+      setLoading(false)
       console.log(followers)
     }
     catch (err) {
@@ -40,8 +41,8 @@ const App = () => {
       />
 
       <div className="response__container row column">
-        {!loading && Object.keys(followers).length > 0 ? (
-          <Follower />
+        {!loading && followers.length > 0 ? (
+          <Follower followers={followers} />
         ) : error ? (
           <ErrorMessage errMessage={error} />
         ) : null}
