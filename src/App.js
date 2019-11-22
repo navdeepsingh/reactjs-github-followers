@@ -4,7 +4,7 @@ import { width, height } from "./utils/Dimensions"
 import HomeShowcase from './components/HomeShowcase'
 import SearchForm from './components/SearchForm'
 import ErrorMessage from './components/ErrorMessage'
-import Follower from './components/Follower'
+import Followers from './components/Followers'
 import GithubService from './services/Github'
 import './App.css'
 
@@ -40,9 +40,9 @@ const App = () => {
         searchHandler={getFollowers}
       />
 
-      <div className="response__container row column">
+      <div className="response__container">
         {!loading && followers.length > 0 ? (
-          <Follower followers={followers} />
+          <Followers items={followers} />
         ) : error ? (
           <ErrorMessage errMessage={error} />
         ) : null}

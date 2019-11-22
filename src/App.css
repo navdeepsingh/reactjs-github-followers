@@ -40,6 +40,7 @@
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
+  align-items: center;
 }
 
 .response__container {
@@ -53,3 +54,12 @@
 .paragraph a{
     color: rgba(0,0,0,.45);
 }
+
+.text-center {
+  text-align: center;
+}
+
+.followers {
+  width: 400px;
+}
+
